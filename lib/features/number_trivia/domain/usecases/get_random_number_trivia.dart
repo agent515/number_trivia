@@ -4,10 +4,8 @@ import 'package:number_trivia/features/number_trivia/domain/repositories/number_
 import 'package:dartz/dartz.dart';
 import 'package:number_trivia/core/errors/failures.dart';
 
-class GetConcreteNumberTrivia implements UseCase<NumberTrivia, Params> {
+class GetRandomNumberTrivia implements UseCase<NumberTrivia, NoParams> {
   final NumberTriviaRepository repository;
-
-  GetConcreteNumberTrivia(this.repository);
 
   @override
   List<Object> get props => [];
@@ -15,7 +13,9 @@ class GetConcreteNumberTrivia implements UseCase<NumberTrivia, Params> {
   @override
   bool get stringify => true;
 
-  Future<Either<Failure, NumberTrivia>> call(Params params) async {
-    return await this.repository.getConcreteNumberTrivia(params.number);
+  GetRandomNumberTrivia(this.repository);
+
+  Future<Either<Failure, NumberTrivia>> call(NoParams noParams) async {
+    return await this.repository.getRandomNumberTrivia();
   }
 }
