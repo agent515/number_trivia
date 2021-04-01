@@ -5,7 +5,6 @@ import 'package:meta/meta.dart';
 
 abstract class UseCase<Type, Params> extends Equatable {
   Future<Either<Failure, Type>> call(Params params);
-
 }
 
 class NoParams extends Equatable {
@@ -19,5 +18,5 @@ class Params extends Equatable {
   Params({@required this.number});
 
   @override
-  List<Object> get props => [];
+  List<Object> get props => [number];
 }
