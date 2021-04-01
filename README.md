@@ -7,4 +7,4 @@ For development of the application, Test Driven Development + Clean Architecture
 
 ## Demo
 
-![Demo](assets/number_trivia.gif)
+<img src="assets/number_trivia.gif" width="300" alt="Demo"/>
