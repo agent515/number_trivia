@@ -11,14 +11,12 @@ class NumberTriviaModel extends NumberTrivia {
   }) : super(number: number, text: text);
 
   factory NumberTriviaModel.fromJSON(Map<String, dynamic> jsonResponse) {
-    return NumberTriviaModel(number: (jsonResponse['number'] as num).toInt(), text: jsonResponse['text']);
+    return NumberTriviaModel(
+        number: (jsonResponse['number'] as num).toInt(),
+        text: jsonResponse['text']);
   }
 
   Map<String, dynamic> toJSON() {
-    return {
-      'number': this.number,
-      'text': this.text
-    };
+    return {'number': this.number, 'text': this.text};
   }
-
 }

@@ -27,20 +27,15 @@ void main() {
 
       expect(result, tNumberTriviaModel);
     });
-
   });
 
   group('toJSON', () {
     test('should give a valid JSON object from NumberTrivia object', () {
-      final Map<String, dynamic> temp = {
-        'number': 1,
-        'text': 'Test Text'
-      };
+      final Map<String, dynamic> temp = {'number': 1, 'text': 'Test Text'};
 
       final result = tNumberTriviaModel.toJSON();
 
       expect(result, temp);
     });
-
   });
 }
