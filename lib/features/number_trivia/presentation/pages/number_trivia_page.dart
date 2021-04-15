@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:number_trivia/features/number_trivia/domain/entities/number_trivia.dart';
 import 'package:number_trivia/features/number_trivia/presentation/bloc/number_trivia_bloc.dart';
 import 'widgets/widgets.dart';
 
@@ -41,6 +40,7 @@ class NumberTriviaPage extends StatelessWidget {
                 } else if (state is Loaded) {
                   return TriviaWidget(trivia: state.trivia);
                 }
+                return Container();
               }),
               SizedBox(
                 height: 20,

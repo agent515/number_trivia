@@ -9,9 +9,11 @@ import 'package:number_trivia/features/number_trivia/domain/usecases/get_concret
 import 'package:number_trivia/features/number_trivia/domain/usecases/get_random_number_trivia.dart';
 import 'package:number_trivia/features/number_trivia/presentation/bloc/number_trivia_bloc.dart';
 
+//ignore: must_be_immutable
 class MockGetConcreteNumberTrivia extends Mock
     implements GetConcreteNumberTrivia {}
 
+//ignore: must_be_immutable
 class MockGetRandomNumberTrivia extends Mock implements GetRandomNumberTrivia {}
 
 class MockInputConverter extends Mock implements InputConverter {}
